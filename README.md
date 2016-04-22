@@ -1,20 +1,30 @@
 # aws-iot-python
 AWS Iot Python
 Raspberry Pi 2 + OLED + RFID reader + RGB led + Waveshare laser transceiver
+View demo here: [AWS IoT using Python and Raspberry Pi 2]
 
 ## Overview
 AWS IoT project that utilizes several of AWS services to manage the flow of data and elastic infrastructure.
 
 The usage for this sytem is as follows:
 1. The user wants to record the time it takes for he/she to run a certain distance.
+
 2. User has a personalized RFID card that they would take to the starting line.
+
 3. User then places their card on he RFID reader.
+
 4. At this point, the user's information is feteched from a web service hosted on Amazon's EC2 service.
+
 5. The user information is then displayed on the oled screen.
+
 6. After a short pause, the words READY->SET->GO! are displayed on the oled screen.
+
 7. At this point, the user would begin their sprint and a timer is displayed on the oled screen.
+
 8. To finish the race, the user would cross the laser at the finish line.
+
 9. As soon as they break the laser, the timer stops and their time is published to an AWS IoT topic.
+
 10. A rule is setup to automatically forward the payload of that topic toa lambda function that will update a chart in realtime using socket.io.
 
 This repo is broken up into 4 folders:
@@ -143,15 +153,16 @@ of 'flask-web-app' from this repo.
 | 3.3V |   3.3V (Any)  |
 
 | RGB led | Pi |
-| ------- | -- | 
-| Red     | 36 |    
-| Green   | 40 | 
+| ------- | -- |
+| Red     | 36 |   
+| Green   | 40 |
 | Blue    | 38 |
 | Cathode | 17 |
 
 ## Disclaimer
 This project is in no way shape or form suitable for use commercial use. This project was purely for getting more familiar with Amazon's IoT service. Feel free to use this as a starting point for your own projects!
 
+[AWS IoT using Python and Raspberry Pi 2]: https://youtu.be/GUXpuYni6zk
 [Launch Flask App on EC2 instance]: <http://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/>
 [Getting Started with AWS Iot on the Raspbery Pi]: <http://docs.aws.amazon.com/iot/latest/developerguide/iot-device-sdk-c.html>
 [raspbian]:<https://www.raspberrypi.org/downloads/raspbian/>
