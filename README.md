@@ -158,12 +158,13 @@ is publish to your topic. (pm me if you need help setting this up)
 | GND  |    GND (Any)  |
 | 3.3V |   3.3V (Any)  |
 
-| RGB led | Pi |
-| ------- | -- |
-| Red     | 36 |
-| Green   | 40 |
-| Blue    | 38 |
-| Cathode | 17 |
+| RBG led |    Pi    |
+| ------- | -------- | 
+| Red     |    36    |
+| Green   |    40    |
+| Blue    |    38    |
+| Cathode |    17    |
+
 
 ## Disclaimer
 This project is in no way shape or form suitable for use commercial use. This project was purely for getting more familiar with Amazon's IoT service. Feel free to use this as a starting point for your own projects!
