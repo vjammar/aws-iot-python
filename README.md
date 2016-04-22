@@ -93,7 +93,7 @@ Follow the guide on Amazon's "[Getting Started with AWS Iot on the Raspbery Pi]"
 5. Follow this tutorial: [Launch Flask App on EC2 instance]
 6. Once your 'hello world' app is running, you can replace the contents of the 'flaskapp' directory with the contents
 of 'flask-web-app' from this repo.
-7. You'll have to install several packages to get the flask up running. Run the following commands:
+7. You'll have to install several packages to get the flask app up running. Run the following commands:
     
     ```sh
     $ sudo pip install flask-sqlalchemy
@@ -116,6 +116,8 @@ of 'flask-web-app' from this repo.
 2. Highlight all 3 files/folders in that folder and make a zip file.
 3. Log into your AWS account and navigate to the lambda service.
 4. Make a new function and upload the zip file you created in step 2.
+5. Once your lambda is made, navigate to the IoT services and setup a rule that will call that function when a message
+is publish to your topic. (pm me if you need help setting this up)
 
 #### Raspberry Pi Configuration
 1. Take the contents of the 'raspberry-pi' folder and upload them to a folder labled 'aws-iot-python' that is sitting in your home directory. The complete path should be /home/pi/aws-iot-python.
@@ -154,7 +156,7 @@ of 'flask-web-app' from this repo.
 
 | RGB led | Pi |
 | ------- | -- |
-| Red     | 36 |   
+| Red     | 36 |
 | Green   | 40 |
 | Blue    | 38 |
 | Cathode | 17 |
