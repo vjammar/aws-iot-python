@@ -29,6 +29,7 @@ The usage for this sytem is as follows:
 10. A rule is setup to automatically forward the payload of that topic toa lambda function that will update a chart in realtime using socket.io.
 
 This repo is broken up into 4 folders:
+
 1. 'raspberry-pi' - source code to put on the raspberry pi. Make a folder in your home folder called 'aws-iot-python' and place the contents of this folder in there.
 
 2. 'flask-web-app' - source code for the flask app used to manage all web services.
@@ -49,7 +50,7 @@ This repo is broken up into 4 folders:
     ```
 
 ## Materials Used
-[Materials used diagram]
+![alt text][Materials used diagram]
 
 - Raspberry Pi 2 with wifi dongle
 - Breadboard
@@ -172,4 +173,4 @@ This project is in no way shape or form suitable for use commercial use. This pr
 [Getting Started with AWS Iot on the Raspbery Pi]: <http://docs.aws.amazon.com/iot/latest/developerguide/iot-device-sdk-c.html>
 [raspbian]:<https://www.raspberrypi.org/downloads/raspbian/>
 [root certificate]:<https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem>
-[Materials used diagram]: https://github.com/vjammar/aws-iot-python/blob/master/screenshots/materials-used.jpg "Project materials"
+[Materials used diagram]: https://s3.amazonaws.com/rfid-aws-users/materials-used.jpg "Project materials"
