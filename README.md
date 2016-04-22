@@ -8,25 +8,25 @@ View demo here: [AWS IoT using Python and Raspberry Pi 2]
 AWS IoT project that utilizes several of AWS services to manage the flow of data and elastic infrastructure.
 
 The usage for this sytem is as follows:
-1. The user wants to record the time it takes for he/she to run a certain distance.
+1. The user wants to record the time it takes for him/her to run a certain distance.
 
-2. User has a personalized RFID card that they would take to the starting line.
+2. User has a personalized RFID card that they take to the starting line.
 
 3. User then places their card on he RFID reader.
 
-4. At this point, the user's information is feteched from a web service hosted on Amazon's EC2 service.
+4. At this point, the user's information is fetched from a web service hosted on Amazon's EC2 service.
 
 5. The user information is then displayed on the oled screen.
 
 6. After a short pause, the words READY->SET->GO! are displayed on the oled screen.
 
-7. At this point, the user would begin their sprint and a timer is displayed on the oled screen.
+7. At this point, the user begins their sprint and a timer is displayed on the oled screen.
 
-8. To finish the race, the user would cross the laser at the finish line.
+8. To finish the race, the user crosses the laser at the finish line.
 
 9. As soon as they break the laser, the timer stops and their time is published to an AWS IoT topic.
 
-10. A rule is setup to automatically forward the payload of that topic toa lambda function that will update a chart in realtime using socket.io.
+10. A rule is setup to automatically forward the payload of that topic to a lambda function that will update a chart in realtime using socket.io.
 
 This repo is broken up into 4 folders:
 
@@ -91,13 +91,12 @@ Follow the guide on Amazon's "[Getting Started with AWS Iot on the Raspbery Pi]"
 
 #### Setting up your flask web app
 1. Log into your AWS account and navigate to the EC2 service.
-2. Launch a new instance and select the default Ubuntu Amazon Image.
-3. The size of this instance should be at least t2.medium (I tried micro but it kept running out of memory)
-4. When the instance is up and running, ssh into it using your private key.
-5. Follow this tutorial: [Launch Flask App on EC2 instance]
-6. Once your 'hello world' app is running, you can replace the contents of the 'flaskapp' directory with the contents
+2. Launch a new instance and select the default Ubuntu Amazon Image. The size of this instance should be at least t2.medium (I tried micro but it kept running out of memory)
+3. When the instance is up and running, ssh into it using your private key.
+4. Follow this tutorial: [Launch Flask App on EC2 instance]
+5. Once your 'hello world' app is running, you can replace the contents of the 'flaskapp' directory with the contents
 of 'flask-web-app' from this repo.
-7. You'll have to install several packages to get the flask app up running. Run the following commands:
+6. You'll have to install several packages to get the flask app up running. Run the following commands:
     
     ```sh
     $ sudo pip install flask-sqlalchemy
@@ -105,14 +104,14 @@ of 'flask-web-app' from this repo.
     $ sudo pip install PyMySQL
     ```
 
-8. Edit 'flaskapp.py' and update line 15 with your MySQL connection string. Your database should have a table labled 'users' with 3 columns ('uid', 'name', and 'avatar').
-9. Save your changes and restart the web app using the following command:
+7. Edit 'flaskapp.py' and update line 15 with your MySQL connection string. Your database should have a table labled 'users' with 3 columns ('uid', 'name', and 'avatar').
+8. Save your changes and restart the web app using the following command:
 
     ```sh
     $ sudo apachectl restart 
     ```
 
-10. Test your web service by inserting a record into your database and calling one of the web services.
+9. Test your web service by inserting a record into your database and calling one of the web services.
 
 
 #### Setting up your lambda function
@@ -167,7 +166,7 @@ is publish to your topic. (pm me if you need help setting this up)
 
 
 ## Disclaimer
-This project is in no way shape or form suitable for use commercial use. This project was purely for getting more familiar with Amazon's IoT service. Feel free to use this as a starting point for your own projects!
+This project is in no way shape or form suitable for commercial use. This project was purely for getting more familiar with Amazon's IoT service. Feel free to use this as a starting point for your own projects!
 
 [AWS IoT using Python and Raspberry Pi 2]: <https://youtu.be/GUXpuYni6zk>
 [Launch Flask App on EC2 instance]: <http://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/>
