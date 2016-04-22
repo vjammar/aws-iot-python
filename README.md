@@ -1,6 +1,7 @@
 # aws-iot-python
 AWS Iot Python
 Raspberry Pi 2 + OLED + RFID reader + RGB led + Waveshare laser transceiver
+
 View demo here: [AWS IoT using Python and Raspberry Pi 2]
 
 ## Overview
@@ -47,7 +48,9 @@ This repo is broken up into 4 folders:
     $ sudo apt-get install git-core
     ```
 
-## Materials Used (see screenshots folder for more info)
+## Materials Used
+[Materials used diagram]
+
 - Raspberry Pi 2 with wifi dongle
 - Breadboard
 - 128x64 Oled LCD Oled LED Module
@@ -164,8 +167,9 @@ is publish to your topic. (pm me if you need help setting this up)
 ## Disclaimer
 This project is in no way shape or form suitable for use commercial use. This project was purely for getting more familiar with Amazon's IoT service. Feel free to use this as a starting point for your own projects!
 
-[AWS IoT using Python and Raspberry Pi 2]: https://youtu.be/GUXpuYni6zk
+[AWS IoT using Python and Raspberry Pi 2]: <https://youtu.be/GUXpuYni6zk>
 [Launch Flask App on EC2 instance]: <http://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/>
 [Getting Started with AWS Iot on the Raspbery Pi]: <http://docs.aws.amazon.com/iot/latest/developerguide/iot-device-sdk-c.html>
 [raspbian]:<https://www.raspberrypi.org/downloads/raspbian/>
 [root certificate]:<https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem>
+[Materials used diagram]: https://github.com/vjammar/aws-iot-python/blob/master/screenshots/materials-used.jpg "Project materials"
